@@ -1,5 +1,7 @@
 package com.sserdiuk.baseadroidframework.screens.main
 
-interface MainRouter {
-    fun navigateToScreenShouldBe()
+import com.sserdiuk.baseadroidframework.Router
+
+interface MainRouter : Router {
+    fun navigateToSplashScreen()
 }

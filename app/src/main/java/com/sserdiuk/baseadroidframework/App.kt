@@ -7,7 +7,8 @@ import android.widget.Toast
 // TODO: initial params put here
 // TODO: Add Contact us screen
 class App : Application() {
-    init {
+    override fun onCreate() {
+        super.onCreate()
         appContext = applicationContext
     }
 

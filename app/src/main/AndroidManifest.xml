@@ -3,7 +3,7 @@
     package="com.sserdiuk.baseadroidframework">
 
     <application
-        android:name=".App"
+        android:name="com.sserdiuk.baseadroidframework.App"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
