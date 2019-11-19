@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:layout_width="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:srcCompat="@drawable/fastfood"
+            tools:layout_width="100dp"
+            tools:layout_height="100dp"
+            android:id="@+id/itemImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/food_image"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:layout_marginEnd="8dp"
+            />
+
+        <TextView
+            style="@style/HeadTextItemInList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            tools:text="Hlebushek obichnii vkusni"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            />
+
+        <TextView
+            style="@style/BodyTextItemInList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/consist"
+            app:layout_constraintTop_toBottomOf="@+id/quantity"
+            app:layout_constraintStart_toStartOf="@+id/foodName"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Sostav bla bla bla wiskas asdfasdfasdf sadfasfdasdf sadf раз вда три четврые фжыдвлаожфыдволажфдыовлажфыдолважфыдлоажфылоа"
+            />
+
+        <TextView
+            style="@style/BodyTextItemInList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodAds"
+            tools:text="E124, E124, E128"
+            app:layout_constraintStart_toStartOf="@+id/foodName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consist"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            />
+
+        <TextView
+            style="@style/BodyTextItemInList"
+            tools:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity"
+            app:layout_constraintTop_toBottomOf="@+id/foodName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/foodName"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.35"
+            android:id="@+id/guideline2"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

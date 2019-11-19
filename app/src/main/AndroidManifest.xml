@@ -3,7 +3,7 @@
     package="com.sserdiuk.baseadroidframework">
 
     <application
-        android:name="com.sserdiuk.baseadroidframework.screens.App"
+        android:name=".screens.App"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".screens.search.SearchView"></activity>
         <activity android:name=".screens.splash.SplashView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

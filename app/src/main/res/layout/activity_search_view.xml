@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.search.SearchView"
+    >
+
+    <EditText
+        android:layout_margin="8dp"
+        android:id="@+id/etTypeForSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/typeForSearch"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        tools:ignore="Autofill"
+        />
+
+    <TextView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/message"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_red_dark"
+        tools:text="Results:"
+        />
+
+    <ProgressBar
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="5"
+        android:id="@+id/pbSearch"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemsList"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/view_item_in_search"
+            tools:itemCount="5"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            />
+    </ScrollView>
+
+<!--    <fragment-->
+<!--        class="com.sserdiuk.foodscanner.bottomNavigation.NavigatorView"-->
+<!--        android:gravity="bottom"-->
+<!--        android:id="@+id/cameraBottomNavBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        />-->
+</LinearLayout>

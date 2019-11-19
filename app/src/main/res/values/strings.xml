@@ -4,4 +4,8 @@
     <string name="button_1">Button 1</string>
     <string name="button_2">Button 2</string>
     <string name="loading">Loading</string>
+    <string name="try_to_search_something">Try to search something</string>
+    <string name="item_not_found">Item not found</string>
+    <string name="food_image">Food image</string>
+    <string name="typeForSearch">Type For Search</string>
 </resources>
