@@ -10,7 +10,7 @@ import com.sserdiuk.baseadroidframework.utils.foodApi.FoodSearchController
 import com.sserdiuk.baseadroidframework.utils.foodApi.SearchItemsRequest
 
 class SearchPresenter :
-    Presenter<SearchCallbacks, SearchRouter>(), SearchItemsRequest {
+    Presenter<SearchCallbacks, SearchRouter>(), SearchItemsRequest<List<SearchItemModel>> {
 
     private val searchController: FoodSearchController =
         FoodSearchController(networkUtil = NetworkUtil(Constants.API_URL()), searchRequest = this)

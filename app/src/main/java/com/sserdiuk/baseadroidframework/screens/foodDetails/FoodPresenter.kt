@@ -5,9 +5,9 @@ import com.sserdiuk.baseadroidframework.data.DetailsItemModel
 import com.sserdiuk.baseadroidframework.utils.Constants
 import com.sserdiuk.baseadroidframework.utils.NetworkUtil
 import com.sserdiuk.baseadroidframework.utils.foodApi.FoodSearchController
-import com.sserdiuk.baseadroidframework.utils.foodApi.ItemDetailsRequest
+import com.sserdiuk.baseadroidframework.utils.foodApi.SearchItemsRequest
 
-class FoodPresenter : Presenter<FoodCallbacks, FoodRouter>(), ItemDetailsRequest {
+class FoodPresenter : Presenter<FoodCallbacks, FoodRouter>(), SearchItemsRequest<DetailsItemModel> {
     private val searchController: FoodSearchController =
         FoodSearchController(networkUtil = NetworkUtil(Constants.API_URL()), itemRequest = this)
 
@@ -16,7 +16,7 @@ class FoodPresenter : Presenter<FoodCallbacks, FoodRouter>(), ItemDetailsRequest
         else searchController.getItemDetails(path)
     }
 
-    override fun onSuccessRequest(item: DetailsItemModel) {
+    override fun onSuccessRequest(items: DetailsItemModel) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

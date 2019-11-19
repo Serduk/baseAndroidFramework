@@ -18,8 +18,8 @@ import retrofit2.Response
  * */
 class FoodSearchController(
     networkUtil: NetworkUtil,
-    var searchRequest: SearchItemsRequest? = null,
-    var itemRequest: ItemDetailsRequest? = null
+    var searchRequest: SearchItemsRequest<List<SearchItemModel>>? = null,
+    var itemRequest: SearchItemsRequest<DetailsItemModel>? = null
 ) {
     private val foodApi: DobavkamNetApi = networkUtil.retrofit.create(DobavkamNetApi::class.java)
 
@@ -102,12 +102,7 @@ class FoodSearchController(
     }
 }
 
-interface SearchItemsRequest {
-    fun onSuccessRequest(items: List<SearchItemModel>)
-    fun onFailureRequest(message: String)
-}
-
-interface ItemDetailsRequest {
-    fun onSuccessRequest(item: DetailsItemModel)
+interface SearchItemsRequest<E> {
+    fun onSuccessRequest(items : E)
     fun onFailureRequest(message: String)
 }
