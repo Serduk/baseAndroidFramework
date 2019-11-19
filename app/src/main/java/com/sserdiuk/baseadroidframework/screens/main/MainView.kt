@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.SearchView
 import com.sserdiuk.baseadroidframework.screens.App
 import com.sserdiuk.baseadroidframework.R
+import com.sserdiuk.baseadroidframework.screens.search.SearchActivity
 import com.sserdiuk.baseadroidframework.screens.splash.SplashView
 
 class MainView : AppCompatActivity(), MainRouter, MainCallbacks {
@@ -18,7 +18,7 @@ class MainView : AppCompatActivity(), MainRouter, MainCallbacks {
 
     override fun navigateToSearch() {
         App.showToast(this, "Button 2 Clicked!")
-        startActivity(Intent(this, SearchView::class.java))
+        startActivity(Intent(this, SearchActivity::class.java))
     }
 
     override fun navigateToSplashScreen() {

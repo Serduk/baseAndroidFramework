@@ -67,7 +67,7 @@
         </activity>
 
         <activity
-            android:name="com.sserdiuk.baseadroidframework.screens.search.SearchView"
+            android:name="com.sserdiuk.baseadroidframework.screens.search.SearchActivity"
             android:label=""
             android:launchMode="singleTop"
             android:parentActivityName="com.sserdiuk.baseadroidframework.screens.main.MainView"

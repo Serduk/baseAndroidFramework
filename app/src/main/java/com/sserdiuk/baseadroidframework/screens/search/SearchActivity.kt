@@ -2,7 +2,6 @@ package com.sserdiuk.baseadroidframework.screens.search
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -20,7 +19,7 @@ import com.sserdiuk.baseadroidframework.screens.App
 import com.sserdiuk.baseadroidframework.screens.BaseActivity
 import com.sserdiuk.baseadroidframework.screens.foodDetails.FoodActivity
 
-class SearchView : BaseActivity(), SearchCallbacks, SearchRouter, FoodItemsAdapter.ListItemClickListener {
+class SearchActivity : BaseActivity(), SearchCallbacks, SearchRouter, FoodItemsAdapter.ListItemClickListener {
     companion object {
         const val BAR_CODE = "BAR_CODE"
     }
@@ -50,8 +49,8 @@ class SearchView : BaseActivity(), SearchCallbacks, SearchRouter, FoodItemsAdapt
         }
 
         presenter.run {
-            takeView(this@SearchView)
-            takeRouter(this@SearchView)
+            takeView(this@SearchActivity)
+            takeRouter(this@SearchActivity)
             if (intent.hasExtra(BAR_CODE)) onTakeBarcode(intent?.extras?.getString(BAR_CODE))
             else onActivityOpen()
         }
