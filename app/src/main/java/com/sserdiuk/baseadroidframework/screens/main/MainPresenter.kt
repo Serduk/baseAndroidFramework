@@ -4,11 +4,11 @@ import com.sserdiuk.baseadroidframework.Presenter
 
 class MainPresenter : Presenter<MainCallbacks, MainRouter>() {
     fun onButtonClicked() {
-        view?.buttonClicked()
+        view?.showToast()
     }
 
     fun onButtonTwoClicked() {
-        view?.button1Clicked()
+        router?.navigateToSearch()
     }
 
     fun onButtonThreeClicked() {

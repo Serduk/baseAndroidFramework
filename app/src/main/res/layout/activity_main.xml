@@ -16,33 +16,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/showToast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button"
+        android:text="@string/showToast"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/navigateToSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/button_1"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        android:text="@string/goToSearch"
+        app:layout_constraintEnd_toEndOf="@+id/navigateToSplash"
+        app:layout_constraintStart_toStartOf="@+id/navigateToSplash"
+        app:layout_constraintTop_toBottomOf="@+id/navigateToSplash" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/navigateToSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/button_2"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:text="@string/navigateToSplash"
+        app:layout_constraintEnd_toEndOf="@+id/showToast"
+        app:layout_constraintStart_toStartOf="@+id/showToast"
+        app:layout_constraintTop_toBottomOf="@+id/showToast" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,7 @@
 package com.sserdiuk.baseadroidframework.screens.foodDetails
 
-interface FoodRouter {
+import com.sserdiuk.baseadroidframework.Router
+
+interface FoodRouter : Router {
+    fun closeActivity()
 }

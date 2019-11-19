@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.SearchView
 import com.sserdiuk.baseadroidframework.screens.App
 import com.sserdiuk.baseadroidframework.R
 import com.sserdiuk.baseadroidframework.screens.splash.SplashView
@@ -11,35 +12,52 @@ import com.sserdiuk.baseadroidframework.screens.splash.SplashView
 class MainView : AppCompatActivity(), MainRouter, MainCallbacks {
     private val presenter = MainPresenter()
 
-    override fun buttonClicked() {
+    override fun showToast() {
         App.showToast(this, "Button 1 Clicked!")
     }
 
-    override fun button1Clicked() {
+    override fun navigateToSearch() {
         App.showToast(this, "Button 2 Clicked!")
+        startActivity(Intent(this, SearchView::class.java))
     }
 
     override fun navigateToSplashScreen() {
+        App.showToast(this, "Navigate to splash screen")
         startActivity(Intent(this, SplashView::class.java))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        presenter.run {
+            takeView(this@MainView)
+            takeRouter(this@MainView)
+        }
 
-        val button: Button = findViewById(R.id.button)
-        button.setOnClickListener{
+        val button: Button = findViewById(R.id.showToast)
+        val button2: Button = findViewById(R.id.navigateToSearch)
+        val button3: Button = findViewById(R.id.navigateToSplash)
+
+        button.setOnClickListener {
             presenter.onButtonClicked()
         }
 
-        val button2: Button = findViewById(R.id.button2)
-        button2.setOnClickListener{
+
+        button2.setOnClickListener {
             presenter.onButtonTwoClicked()
         }
 
-        val button3: Button = findViewById(R.id.button3)
-        button3.setOnClickListener{
+
+        button3.setOnClickListener {
             presenter.onButtonThreeClicked()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.run {
+            dropView()
+            dropRouter()
         }
     }
 }

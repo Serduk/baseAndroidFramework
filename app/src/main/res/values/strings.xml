@@ -8,4 +8,7 @@
     <string name="item_not_found">Item not found</string>
     <string name="food_image">Food image</string>
     <string name="typeForSearch">Type For Search</string>
+    <string name="showToast">Show Toast</string>
+    <string name="goToSearch">Go to search</string>
+    <string name="navigateToSplash">Navigate to splash</string>
 </resources>
