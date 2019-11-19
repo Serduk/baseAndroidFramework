@@ -3,7 +3,7 @@ package com.sserdiuk.baseadroidframework.screens.splash
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
-import com.sserdiuk.baseadroidframework.BaseActivity
+import com.sserdiuk.baseadroidframework.screens.BaseActivity
 import com.sserdiuk.baseadroidframework.R
 import com.sserdiuk.baseadroidframework.screens.main.MainView
 

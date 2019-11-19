@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.sserdiuk.baseadroidframework.App
+import com.sserdiuk.baseadroidframework.screens.App
 import com.sserdiuk.baseadroidframework.R
 import com.sserdiuk.baseadroidframework.screens.splash.SplashView
 

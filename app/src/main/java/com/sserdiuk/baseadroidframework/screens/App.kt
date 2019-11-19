@@ -1,4 +1,4 @@
-package com.sserdiuk.baseadroidframework
+package com.sserdiuk.baseadroidframework.screens
 
 import android.app.Application
 import android.content.Context
